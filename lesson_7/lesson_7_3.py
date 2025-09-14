@@ -1,8 +1,8 @@
 # === 7.3: 理想線と仕上げ ===
-import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 import matplotlib.ticker as ticker
+import numpy as np
+import pandas as pd
 
 df = pd.read_csv("../output/comparison_filtered.csv")
 
@@ -10,7 +10,13 @@ plt.figure(figsize=(8, 8))
 ax = plt.gca()
 
 # 散布図
-plt.scatter(df["Actual Price"], df["Predicted Price"], color="orange", alpha=0.7, label="Predicted vs Actual")
+plt.scatter(
+    df["Actual Price"],
+    df["Predicted Price"],
+    color="orange",
+    alpha=0.7,
+    label="Predicted vs Actual",
+)
 
 # 軸設定
 x_min, x_max = 0, 2e8
@@ -29,7 +35,7 @@ ax.yaxis.set_major_formatter(formatter)
 
 # グリッドと理想線
 ax.grid(which="major", linestyle="--", linewidth=0.5)
-plt.plot([x_min, x_max], [y_min, y_max], '--r', linewidth=2, label="Ideal Prediction")
+plt.plot([x_min, x_max], [y_min, y_max], "--r", linewidth=2, label="Ideal Prediction")
 
 # ラベル
 plt.xlabel("Actual Price (x 1,000,000)")

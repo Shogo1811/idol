@@ -1,16 +1,13 @@
 # === 5.4: comparison.csv を保存 ===
-import pandas as pd
 import joblib
+import pandas as pd
 
 # データ読み込み
 y_test = joblib.load("../output/y_test.pkl")
 y_pred = joblib.load("../output/y_pred.pkl")
 
 # 比較データ作成
-comparison = pd.DataFrame({
-    "Actual Price": y_test.values,
-    "Predicted Price": y_pred
-})
+comparison = pd.DataFrame({"Actual Price": y_test.values, "Predicted Price": y_pred})
 
 # 整数化
 comparison["Predicted Price"] = comparison["Predicted Price"].astype(int)

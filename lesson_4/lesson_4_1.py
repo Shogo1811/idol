@@ -1,6 +1,6 @@
 # === 4.1: ランダムフォレストモデルの準備 ===
-from sklearn.ensemble import RandomForestRegressor
 import joblib
+from sklearn.ensemble import RandomForestRegressor
 
 # データの読み込み（学習用のみ）
 X_train = joblib.load("../output/X_train.pkl")

@@ -1,0 +1,3 @@
+source .venv/bin/activate
+isort ⇨ black
+の順でフォーマットチェック

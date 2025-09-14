@@ -1,8 +1,8 @@
-
 # === 3.2: データ分割 ===
-from sklearn.model_selection import train_test_split
-import pandas as pd
 import joblib
+import pandas as pd
+from sklearn.model_selection import train_test_split
+
 
 def parse_distance(value):
     if isinstance(value, str):

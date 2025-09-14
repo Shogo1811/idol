@@ -1,7 +1,7 @@
 # === 4.4: モデルの評価（RMSEとR²） ===
 import joblib
-from sklearn.metrics import mean_squared_error, r2_score
 import numpy as np
+from sklearn.metrics import mean_squared_error, r2_score
 
 # テスト用の正解データと予測結果を読み込み
 y_test = joblib.load("../output/y_test.pkl")

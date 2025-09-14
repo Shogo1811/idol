@@ -1,7 +1,7 @@
 # === 3.1: データ読み込み ===
 # === 3.1: 前処理済みCSVから X, y を保存 ===
-import pandas as pd
 import joblib
+import pandas as pd
 
 # 前処理済みデータを読み込む
 df = pd.read_csv("../output/processed_data.csv", encoding="utf-8-sig")

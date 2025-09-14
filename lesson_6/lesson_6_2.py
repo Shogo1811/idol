@@ -4,8 +4,7 @@ import pandas as pd
 df = pd.read_csv("../output/comparison.csv")
 
 filtered = df[
-    (df["Actual Price"] < 250_000_000) &
-    (df["Predicted Price"] < 250_000_000)
+    (df["Actual Price"] < 250_000_000) & (df["Predicted Price"] < 250_000_000)
 ]
 
 print("✅ フィルタ済みデータ:")

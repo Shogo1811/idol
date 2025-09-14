@@ -1,8 +1,8 @@
 # === 7.1: 軸設定と散布図（1,000万円単位で表示） ===
-import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 import matplotlib.ticker as ticker
+import numpy as np
+import pandas as pd
 
 # データ読み込み（単位はそのまま「円」）
 df = pd.read_csv("../output/comparison_filtered.csv")
@@ -19,9 +19,11 @@ ticks = np.arange(0, 2.1e8, 5e7)  # 50,000,000単位
 plt.xticks(ticks)
 plt.yticks(ticks)
 
+
 # 軸ラベルを1,000万円単位で整形
 def format_million(value, _):
     return f"{int(value / 1e6):,}"  # 例: 100000000 → "100"
+
 
 ax = plt.gca()
 ax.xaxis.set_major_formatter(ticker.FuncFormatter(format_million))

@@ -1,8 +1,8 @@
 # === 7.2: 軸ラベルの整形 ===
-import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 import matplotlib.ticker as ticker
+import numpy as np
+import pandas as pd
 
 df = pd.read_csv("../output/comparison_filtered.csv")
 

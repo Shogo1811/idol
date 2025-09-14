@@ -1,5 +1,7 @@
-import pandas as pd
 from datetime import datetime
+
+import pandas as pd
+
 
 def parse_distance(value):
     if isinstance(value, str):
@@ -22,12 +24,19 @@ def parse_distance(value):
     except:
         return None
 
+
 # CSV読み込み（前処理ステップを踏んだ上で）
 df = pd.read_csv("../input/Tokyo_20242_20242.csv", encoding="cp932")
 df.columns = df.columns.str.replace("\ufeff", "")
 
 # 必要な列に絞る
-columns_to_use = ["取引価格（総額）", "面積（㎡）", "最寄駅：距離（分）", "建築年", "市区町村名"]
+columns_to_use = [
+    "取引価格（総額）",
+    "面積（㎡）",
+    "最寄駅：距離（分）",
+    "建築年",
+    "市区町村名",
+]
 df = df[columns_to_use].dropna()
 
 # 整数型へ変換

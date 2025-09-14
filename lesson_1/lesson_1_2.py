@@ -1,4 +1,3 @@
-
 import pandas as pd
 
 file_path = "lesson_1.csv"
@@ -12,8 +11,5 @@ filtered = df[df["取引価格（総額）"] >= 50000000]
 print(filtered)
 
 # 複数条件（かつ・または）
-filtered2 = df[
-    (df["取引価格（総額）"] >= 50000000) &
-    (df["最寄駅：距離（分）"] <= 10)
-]
+filtered2 = df[(df["取引価格（総額）"] >= 50000000) & (df["最寄駅：距離（分）"] <= 10)]
 print(filtered2)
